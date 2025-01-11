@@ -77,6 +77,9 @@
       "vite/client": [
         "../node_modules/vite/client"
       ],
+      "@/lib/utils": [
+        "./shadcn-nuxt/utils"
+      ],
       "~": [
         "./.."
       ],
@@ -95,6 +98,9 @@
       "assets": [
         "../assets"
       ],
+      "assets/*": [
+        "../assets/*"
+      ],
       "public": [
         "../public"
       ],
@@ -110,6 +116,9 @@
       "#internal/nuxt/paths": [
         "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
+      "#color-mode-options": [
+        "./color-mode-options"
+      ],
       "#vue-router": [
         "./vue-router"
       ]
@@ -122,6 +131,9 @@
   },
   "include": [
     "./types/nitro-nuxt.d.ts",
+    "../node_modules/@nuxtjs/tailwindcss/runtime/server",
+    "../node_modules/@nuxtjs/color-mode/runtime/server",
+    "../node_modules/shadcn-nuxt/runtime/server",
     "../node_modules/@nuxt/devtools/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
@@ -131,6 +143,9 @@
   "exclude": [
     "../node_modules",
     "../node_modules/nuxt/node_modules",
+    "../node_modules/@nuxtjs/tailwindcss/node_modules",
+    "../node_modules/@nuxtjs/color-mode/node_modules",
+    "../node_modules/shadcn-nuxt/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../dist"
